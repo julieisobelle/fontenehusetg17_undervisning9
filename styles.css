@@ -1,0 +1,199 @@
+/* GLOBAL */
+html {
+  /* Standard font-size er 16px. 16px = 1em */
+  font-size: 10px;
+}
+
+body {
+  margin: 0;
+  font-size: 1.6rem; /* 16px */
+  padding-inline: 1.6rem; /* 16px. Alt i body er litt fra kanten til nettsiden */
+  /* Tar i bruk font familie vi henter fra fonts.google på all tekst */
+  font-family: "Roboto";
+}
+
+/* Spesifikt setter opp en font familie som skal brukes på desse elementene */
+h1, h2, h3 {
+  font-family: "Bebas Neue";
+}
+
+img {
+  width: 20rem; /* 200px */
+  height: 20rem; /* 200px */
+  /* Tok en farge her fra Figma paletten vår som vi fant fra coolors.co */
+  background-color: #5F506B;
+}
+
+/* HEADER */
+.header {
+  /* I figma ble vi enige om at header burde være med på siden alltid når vi har trykkbar navigasjon. */
+  position: sticky;
+  top: 0;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline; /* Oppdatert fra 'center' for å alltid ha logo og nav på lik linje */
+}
+
+.navList {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  gap: 1.6rem; /* 16px */
+  list-style-type: none;
+}
+
+.hamburgerIcon {
+  height: 3.2rem; /* 32px */
+  width: 3.2rem; /* 32px */
+  display: none;
+  background-color: initial;
+}
+
+/* MAIN */
+/* Hero */
+.hero {
+  height: 100dvh; /* Tidligere vh er nå dvh for dynamic view height for alle skjermer*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.heroIntro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.6rem; /* 16px */
+}
+
+/* Metode 1: Media hvor det er aktuelt at vi gjør en endring. Vil gi oss flere @media underveis i koden istedenfor et samlepunkt. */
+@media (max-widht: 426px) {
+  .heroIntro {
+    flex-direction: column;
+  }
+}
+
+.heroText {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.heroImg {
+  width: 100%;
+}
+
+/* About */
+.about {
+  height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.aboutTextContainer,
+.aboutImgContainer {
+  min-width: 50%;
+  max-width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.aboutText {
+  width: 30rem; /* 300px */
+}
+
+.aboutImg {
+  width: 100%;
+}
+
+.aboutImgText {
+  font-size: 1.2rem; /* 12px */
+  font-style: italic;
+  margin: 6px; /* Margin kan bruke px for estetisk endring */
+}
+
+/* Projects */
+.projects {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.6rem; /* 16px */
+}
+
+.projectsList {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.6rem; /* 16px */
+  list-style-type: none;
+  padding: 0; /* Padding kan bruke px for estetisk endring */
+}
+
+.projectCard {
+  height: 40rem; /* 400px. Kort ofte bruker en absolutt størrelse med px */
+  width: 30rem; /* 300px */
+  border: 2px solid black; /* Border kan bruke px for estetisk endring */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.6rem; /* 16px */
+  text-align: center;
+}
+
+/* FOOTER */
+.footer {
+  display: flex;
+  justify-content: center;
+  font-size: 1.6rem; /* 16px */
+  font-weight: bold;
+}
+
+/* MEDIA QUERY */
+/* Metode 2: Samlet media på bunnen av koden. Hovedsaklig brukt til å endre retning på innhold og å skjule/vise innhold ut i fra hvilken størrelse vi er på */
+@media (max-width: 426px) {
+  /* HEADER */
+  .headerNav {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+  }
+
+  .navList {
+    display: none;
+  }
+
+  .navHamburgerList {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .hamburgerIcon {
+    display: inline;
+  }
+
+  /* MAIN */
+  .heroIntro {
+    flex-direction: column;
+  }
+
+  .about {
+    flex-direction: column;
+  }
+
+  .projectsList {
+    flex-direction: column;
+  }
+
+  /* FOOTER */
+}

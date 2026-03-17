@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="no">
+  <head>
+    <title>Hjem</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="script.js"></script>
+    <!-- Lagt til en font fra fonts.google.com
+         spesifikt valgt å legge til lenken i head i HTML 
+     -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <h2>JH</h2>
+
+      <nav class="headerNav">
+        <ul id="navList" class="navList">
+          <!-- Bookmark anchor teknikken med å bruke anchors som tar i mot en id fra lenger ned på siden. Vi har spesifikt brukt norske navn for id-ene for det blir en del av adressenavnet til nettsiden.  -->
+          <a href="#hjem">
+            <li>Hjem</li>
+          </a>
+          <a href="#om-meg">
+            <li>Om meg</li>
+          </a>
+          <a href="#prosjekter">
+            <li>Prosjekter</li>
+          </a>
+        </ul>
+
+        <!-- Lagt til et ekstra element for å vise til hva vi skal gå gjennom på torsdag med JavaScript -->
+        <img
+          id="hamburgerIcon"
+          class="hamburgerIcon"
+          src="hamburgericon.png"
+          alt="Et ikon med tre horisontale striper som representer en meny"
+        />
+      </nav>
+    </header>
+
+    <main>
+      <section id="hjem" class="hero">
+        <h1>Velkommen til min side!</h1>
+
+        <div class="heroIntro">
+          <p class="heroText">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
+            inventore perspiciatis placeat odio consectetur, rerum alias
+            obcaecati nostrum eaque voluptatem natus ab quis repellat deleniti
+            fugit veritatis aspernatur nesciunt est!
+          </p>
+
+          <img class="heroImg" src="" alt="" />
+        </div>
+      </section>
+
+      <section id="om-meg" class="about">
+        <div class="aboutTextContainer">
+          <h2 class="aboutTitle">Om meg</h2>
+
+          <p class="aboutText">
+            Jeg heter Julie, og jeg underviser på Kodeloftet på Fontenehuset
+            Bergen.
+          </p>
+          <p class="aboutText">
+            Jeg er en web-utviklier som skriver mye HTML, CSS og JavaScript for
+            å lage nettsider. Jeg er spesielt glad i å bruke CSS.
+          </p>
+          <p class="aboutText">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit quae
+            doloribus ab facilis provident distinctio magnam. Voluptates,
+            aliquam ut iste, eveniet necessitatibus quibusdam consequatur
+            temporibus non id beatae, voluptatibus eum.
+          </p>
+        </div>
+
+        <div class="aboutImgContainer">
+          <img class="aboutImg" src="" alt="" />
+
+          <p class="aboutImgText">Bildet er tatt fra unsplash</p>
+        </div>
+      </section>
+
+      <section id="prosjekter" class="projects">
+        <h2 class="projectsTitle">Prosjekter</h2>
+
+        <ul class="projectsList">
+          <li>
+            <div class="projectCard">
+              <h3 class="bottomLine">Undervisning 1: Introduksjon kurset</h3>
+              <img src="" alt="" />
+              <a
+                href="https://github.com/julieisobelle/fontenehusetG17_undervisning1"
+                target="_blank"
+              >
+                Gå til github
+              </a>
+            </div>
+          </li>
+
+          <li>
+            <div class="projectCard">
+              <h3 class="bottomLine">
+                Undervisning 2: Introduksjon HTML og semantisk HTML
+              </h3>
+              <img src="" alt="" />
+              <a
+                href="https://github.com/julieisobelle/fontenehusetG17_undervisning2"
+                target="_blank"
+              >
+                Gå til github
+              </a>
+            </div>
+          </li>
+
+          <li>
+            <div class="projectCard">
+              <h3 class="bottomLine">
+                Undervisning 3: Introduksjon CSS og CSS Flexbox
+              </h3>
+              <img src="" alt="" />
+              <a
+                href="https://github.com/julieisobelle/fontenehusetG17_undervisning1"
+                target="_blank"
+              >
+                Gå til github
+              </a>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Laget av Julie Hauge</p>
+      <div>
+        <h3>Kreditasjoner</h3>
+        <a
+          href="https://www.flaticon.com/free-icons/hamburger"
+          title="hamburger icons"
+          >Hamburger icons created by Lizel Arina - Flaticon</a
+        >
+      </div>
+    </footer>
+  </body>
+</html>
+<!-- Credit list:
+ -->
